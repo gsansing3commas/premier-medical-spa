@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/premier-medical-spa/">
+<!-- BASE:END -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>Premier Medical Spa | Jacksonville, FL</title>
+<meta property="og:title" content="Premier Medical Spa | Jacksonville, FL" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Premier Medical Spa | Jacksonville, FL" />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mq8iuwi3-5nylo";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4694');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='2ipnLum';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=80" alt="Premier Medical Spa Jacksonville">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Southpoint &middot; Jacksonville, FL &middot; Est. 2015</div>
+    <h1>Medicine and artistry, in perfect <em>balance</em></h1>
+    <p class="hero-sub">Modern medical dermatology with the comfort of a spa — aesthetics &amp; wellness personally delivered by Alice Beard, PA-C, for over a decade in Jacksonville.</p>
+    <a href="#concierge" class="hero-cta">Chat with us</a>
+  </div>
+</div>
+
+<!-- WAVE -->
+<div class="wave" style="background:#2e2618">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#faf8f4"/></svg>
+</div>
+
+<!-- CONCIERGE -->
+<div class="concierge-section" id="concierge">
+  <div class="concierge-wrap">
+    <div class="section-tag">Here to help, anytime</div>
+    <div class="section-title">Questions? Just ask Goldie.</div>
+    <div class="concierge-text">
+      <p>Curious whether Morpheus8 or microneedling is right for you? Wondering how hormone pellets work, or how to get on Alice's schedule? Goldie knows the full menu — and can help you request your appointment right now.</p>
+    </div>
+    <iframe src="https://paymegpt.com/agents/66884694/embed" frameborder="0" style="width:100%;max-width:390px;height:560px;border:none;border-radius:10px;"></iframe>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section" style="background:#fff">
+  <div class="section-tag">Meet Alice</div>
+  <div class="about-content">
+    <img class="about-img" src="https://premiermedicalspa.com/wp-content/uploads/2025/12/cropped-Alice-Professional-Pic.jpg" alt="Alice Beard PA-C">
+    <div class="about-quote">Every client has a unique fingerprint — your care should be customized to match it, never one-size-fits-all.</div>
+    <p class="about-detail"><strong>Alice Beard, PA-C</strong> is a nationally certified, Florida-licensed Physician Assistant with a Masters in Medicine from the University of Florida College of Medicine. Her medical career began as a 911 paramedic in Texas, followed by years in emergency medicine, dermatology, and aesthetics. Since founding Premier Medical Spa in 2015, she has built a loyal Jacksonville following as an expert injector and skincare professional — practicing under the medical direction of <strong>Dr. Vaishali B. Doolabh, MD</strong>.</p>
+  </div>
+</div>
+
+<div class="bloom-divider">&#x1F33B; &middot; &#x2728; &middot; &#x1F33B;</div>
+
+<!-- SERVICES -->
+<div class="section">
+  <div class="section-tag">What we offer</div>
+  <div class="section-title">Treatments &amp; Services</div>
+  <div class="section-sub">Natural skincare and balanced aesthetics — every plan tailored to your goals and your budget.</div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">&#x2728;</div>
+      <div class="service-body">
+        <div class="service-name">Injectables</div>
+        <div class="service-desc">Neurotoxins, dermal fillers &amp; biostimulators — expertly placed by a seasoned injector for natural, balanced results.</div>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F52C;</div>
+      <div class="service-body">
+        <div class="service-name">Morpheus8 &amp; Lasers</div>
+        <div class="service-desc">Morpheus8 with resurfacing, IPL, Quantum skin lifting &amp; tightening, laser hair removal, and vein removal.</div>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1FA78;</div>
+      <div class="service-body">
+        <div class="service-name">PRP, PRF &amp; Threads</div>
+        <div class="service-desc">Harness your own biology with PRP &amp; PRF, or lift and smooth naturally with Mint PDO threads.</div>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F4A7;</div>
+      <div class="service-body">
+        <div class="service-name">Facials &amp; Microneedling</div>
+        <div class="service-desc">Medical facials, Hydrafacial, and microneedling — clinically driven treatments that leave skin luminous.</div>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F33F;</div>
+      <div class="service-body">
+        <div class="service-name">Hair Restoration</div>
+        <div class="service-desc">Regenerative, PRP-based protocols to restore thickness and confidence — for men and women.</div>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x2696;&#xFE0F;</div>
+      <div class="service-body">
+        <div class="service-name">Hormones &amp; Wellness</div>
+        <div class="service-desc">Pellet hormone balancing for men &amp; women, cortisol &amp; fatigue support, and GLP-1 medical weight management.</div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:32px">
+    <p style="color:#ab9d7f;font-size:13px;font-weight:300">Blending modern medical dermatology with the comforts of the spa — since 2015</p>
+  </div>
+</div>
+
+<!-- DETAILS BAR -->
+<div class="details-bar">
+  <div class="details-grid">
+    <div class="detail-item">
+      <div class="detail-label">Location</div>
+      <div class="detail-value">6817 Southpoint Pkwy, Suite 2501<br>Jacksonville, FL 32216</div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-label">Call or Text</div>
+      <div class="detail-value"><a href="tel:9049550605">(904) 955-0605</a><br><span style="font-size:13px;color:rgba(255,255,255,0.55)">Return call within 24 hours</span></div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-label">Email</div>
+      <div class="detail-value"><a href="mailto:PremierMedicalSpa@yahoo.com">PremierMedicalSpa@yahoo.com</a></div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-label">Medical Director</div>
+      <div class="detail-value">Dr. Vaishali B. Doolabh, MD</div>
+    </div>
+  </div>
+</div>
+
+<!-- WELLNESS -->
+<div class="wellness-section">
+  <div class="section-tag">Beyond aesthetics</div>
+  <div class="section-title">Wellness, Anti-Aging &amp; Alternatives</div>
+  <div class="wellness-inner">
+    <p>Looking great starts with feeling great. Premier offers consultations in supplemental treatments alongside traditional medicine — pellet hormone balancing, cortisol stress &amp; fatigue care, and GLP-1 programs for weight regulation. One provider, one plan, inside and out.</p>
+    <a href="sms:9049550605?body=Hi%20Alice%2C%20I%27d%20like%20to%20book%20a%20wellness%20consultation." class="wellness-btn">Text us to learn more</a>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="section-tag">Ready to begin?</div>
+  <div class="cta-title">Your consultation with Alice is one text away.</div>
+  <p class="cta-sub">Text your preferred date, time, and service to (904) 955-0605 — you'll hear back within 24 hours. No pressure, just a real plan for your goals.</p>
+  <a href="sms:9049550605?body=Hi%2C%20I%27d%20like%20to%20request%20an%20appointment." class="cta-btn">Text to book</a>
+  <a href="tel:9049550605" class="cta-btn ghost">Call (904) 955-0605</a>
+  <p class="cta-note">Or <a href="#concierge" style="color:#b88a2e">chat with Goldie</a> to get started right now</p>
+</div>
+
+</body>
+</html>
