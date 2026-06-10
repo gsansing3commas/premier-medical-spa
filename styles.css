@@ -1,0 +1,78 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#faf8f4;color:#3a3326;font-family:"Nunito Sans",sans-serif;line-height:1.7;font-weight:300}
+a{color:#b88a2e;text-decoration:none}
+
+/* HERO */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+.hero-img{position:absolute;inset:0;z-index:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(46,38,24,0.84) 0%,rgba(46,38,24,0.52) 50%,rgba(46,38,24,0.12) 100%);z-index:1}
+.hero-content{position:relative;z-index:2;padding:60px 40px;max-width:580px}
+.hero-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#e8c87a;margin-bottom:18px;font-weight:600}
+.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(36px,6vw,58px);color:#fff;line-height:1.1;margin-bottom:14px;font-weight:400}
+.hero h1 em{font-style:italic;color:#f0d894}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.78);margin-bottom:36px;font-weight:300;max-width:440px;line-height:1.85}
+.hero-cta{display:inline-block;padding:15px 38px;border:1px solid #e8c87a;color:#e8c87a;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:all .3s;border-radius:2px}
+.hero-cta:hover{background:#e8c87a;color:#2e2618}
+
+/* WAVE DIVIDER */
+.wave{display:block;width:100%;overflow:hidden;line-height:0;background:#faf8f4}
+.wave svg{display:block;width:100%}
+
+/* SECTIONS */
+.section{padding:80px 24px}
+.section-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#b88a2e;margin-bottom:12px;font-weight:600;text-align:center}
+.section-title{font-family:"Cormorant Garamond",serif;font-size:clamp(28px,4vw,42px);text-align:center;margin-bottom:16px;font-weight:400;color:#3a3326}
+.section-sub{text-align:center;color:#9a8c6e;font-size:15px;max-width:480px;margin:0 auto 48px;font-weight:300}
+
+/* CONCIERGE */
+.concierge-section{background:#f5efe2;padding:80px 24px}
+.concierge-wrap{display:flex;flex-direction:column;align-items:center;gap:20px;max-width:800px;margin:0 auto}
+.concierge-text{text-align:center;max-width:470px}
+.concierge-text p{color:#9a8c6e;font-size:14px;line-height:1.8}
+
+/* ABOUT */
+.about-content{max-width:640px;margin:0 auto;text-align:center}
+.about-quote{font-family:"Cormorant Garamond",serif;font-size:22px;font-style:italic;color:#3a3326;line-height:1.65;margin-bottom:24px;font-weight:400;position:relative;padding:0 24px}
+.about-quote::before{content:"P";font-size:64px;color:#e8c87a;position:absolute;top:-20px;left:-4px;font-family:"Cormorant Garamond",serif;line-height:1}
+.about-detail{color:#9a8c6e;font-size:14px;line-height:1.95}
+.about-detail strong{color:#3a3326;font-weight:600}
+.about-img{width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:top;margin:0 auto 24px;display:block;border:3px solid #e8c87a}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:780px;margin:0 auto}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr}}
+.service-card{background:#fff;border-radius:10px;overflow:hidden;transition:transform .3s,box-shadow .3s;border:1px solid #ece2cc}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(184,138,46,0.14)}
+.service-icon{width:100%;height:160px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f5efe2,#f0e2bd);font-size:48px}
+.service-body{padding:20px 22px}
+.service-name{font-family:"Cormorant Garamond",serif;font-size:20px;color:#3a3326;margin-bottom:5px;font-weight:500}
+.service-desc{font-size:12px;color:#ab9d7f;font-weight:300;line-height:1.65}
+
+/* DETAILS BAR */
+.details-bar{background:#2e2618;color:rgba(255,255,255,0.7);padding:52px 24px}
+.details-grid{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;max-width:880px;margin:0 auto}
+.detail-item{text-align:center}
+.detail-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#e8c87a;margin-bottom:8px;font-weight:600}
+.detail-value{font-family:"Cormorant Garamond",serif;font-size:17px;color:#fff;font-weight:400;line-height:1.55}
+.detail-value a{color:#f0d894}
+
+/* WELLNESS SECTION */
+.wellness-section{background:#fff;padding:72px 24px;text-align:center}
+.wellness-inner{max-width:580px;margin:0 auto}
+.wellness-inner p{color:#9a8c6e;font-size:14px;line-height:1.9;margin-bottom:28px}
+.wellness-btn{display:inline-block;padding:13px 36px;border:1px solid #b88a2e;color:#b88a2e;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:all .3s;border-radius:2px}
+.wellness-btn:hover{background:#b88a2e;color:#fff}
+
+/* CTA */
+.cta-section{padding:80px 24px;text-align:center;background:#f5efe2}
+.cta-title{font-family:"Cormorant Garamond",serif;font-size:clamp(26px,4vw,40px);color:#3a3326;margin-bottom:12px;font-weight:400}
+.cta-sub{color:#9a8c6e;font-size:14px;margin-bottom:32px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.85;font-weight:300}
+.cta-btn{display:inline-block;padding:16px 46px;background:#b88a2e;color:#fff;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:all .3s;border-radius:2px;margin:0 6px 10px}
+.cta-btn:hover{background:#9a7222}
+.cta-btn.ghost{background:transparent;border:1px solid #b88a2e;color:#b88a2e}
+.cta-btn.ghost:hover{background:#b88a2e;color:#fff}
+.cta-note{font-size:12px;color:#ab9d7f;margin-top:14px;font-weight:300}
+
+/* SUNFLOWER ACCENTS */
+.bloom-divider{text-align:center;padding:24px 0;font-size:22px;color:#e8c87a;letter-spacing:8px;opacity:.75}
